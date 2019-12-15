@@ -51,101 +51,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ayudante.cs" />
-    <Compile Include="Controlador.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Controladores\Ayudante.cs" />
+    <Compile Include="Controladores\Controlador.cs" />
+    <Compile Include="UI\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPrincipal.Designer.cs">
+    <Compile Include="UI\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Movement.cs" />
+    <Compile Include="Clases\Movement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ucBlanquear.cs">
+    <Compile Include="Clases\Product.cs" />
+    <Compile Include="UI\ucBlanquear.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucBlanquear.Designer.cs">
+    <Compile Include="UI\ucBlanquear.Designer.cs">
       <DependentUpon>ucBlanquear.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucDni.cs">
+    <Compile Include="UI\ucDni.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucDni.Designer.cs">
+    <Compile Include="UI\ucDni.Designer.cs">
       <DependentUpon>ucDni.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMovimiento.cs">
+    <Compile Include="UI\ucMovimiento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMovimiento.Designer.cs">
+    <Compile Include="UI\ucMovimiento.Designer.cs">
       <DependentUpon>ucMovimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucNumpad.cs">
+    <Compile Include="UI\ucNumpad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucNumpad.Designer.cs">
+    <Compile Include="UI\ucNumpad.Designer.cs">
       <DependentUpon>ucNumpad.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucOperaciones.cs">
+    <Compile Include="UI\ucOperaciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucOperaciones.Designer.cs">
+    <Compile Include="UI\ucOperaciones.Designer.cs">
       <DependentUpon>ucOperaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucPin.cs">
+    <Compile Include="UI\ucPin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucPin.Designer.cs">
+    <Compile Include="UI\ucPin.Designer.cs">
       <DependentUpon>ucPin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucSaldo.cs">
+    <Compile Include="UI\ucSaldo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucSaldo.Designer.cs">
+    <Compile Include="UI\ucSaldo.Designer.cs">
       <DependentUpon>ucSaldo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucTarjeta.cs">
+    <Compile Include="UI\ucTarjeta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucTarjeta.Designer.cs">
+    <Compile Include="UI\ucTarjeta.Designer.cs">
       <DependentUpon>ucTarjeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucUltimosMovimientos.cs">
+    <Compile Include="UI\ucUltimosMovimientos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucUltimosMovimientos.Designer.cs">
+    <Compile Include="UI\ucUltimosMovimientos.Designer.cs">
       <DependentUpon>ucUltimosMovimientos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPrincipal.resx">
+    <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="UI\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -157,31 +130,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ucBlanquear.resx">
+    <EmbeddedResource Include="UI\ucBlanquear.resx">
       <DependentUpon>ucBlanquear.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucDni.resx">
+    <EmbeddedResource Include="UI\ucDni.resx">
       <DependentUpon>ucDni.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucMovimiento.resx">
+    <EmbeddedResource Include="UI\ucMovimiento.resx">
       <DependentUpon>ucMovimiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucNumpad.resx">
+    <EmbeddedResource Include="UI\ucNumpad.resx">
       <DependentUpon>ucNumpad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucOperaciones.resx">
+    <EmbeddedResource Include="UI\ucOperaciones.resx">
       <DependentUpon>ucOperaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucPin.resx">
+    <EmbeddedResource Include="UI\ucPin.resx">
       <DependentUpon>ucPin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucSaldo.resx">
+    <EmbeddedResource Include="UI\ucSaldo.resx">
       <DependentUpon>ucSaldo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucTarjeta.resx">
+    <EmbeddedResource Include="UI\ucTarjeta.resx">
       <DependentUpon>ucTarjeta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucUltimosMovimientos.resx">
+    <EmbeddedResource Include="UI\ucUltimosMovimientos.resx">
       <DependentUpon>ucUltimosMovimientos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -197,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
