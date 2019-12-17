@@ -64,11 +64,15 @@
     <Compile Include="Clases\Operacion.cs" />
     <Compile Include="Controladores\Ayudante.cs" />
     <Compile Include="Controladores\Controlador.cs" />
+    <Compile Include="Controladores\ControladorUsuario.cs" />
+    <Compile Include="Controladores\ControladorOperacion.cs" />
     <Compile Include="DAL\ContextoBanco.cs" />
     <Compile Include="DAL\Interfaces\IRepositorioGeneral.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioUsuario.cs" />
     <Compile Include="DAL\Interfaces\IRepositorioOperacion.cs" />
     <Compile Include="DAL\Interfaces\IUnidadDeTrabajo.cs" />
     <Compile Include="DAL\Repositorio\RepositorioGeneral.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioUsuario.cs" />
     <Compile Include="DAL\Repositorio\RepositorioOperacion.cs" />
     <Compile Include="DAL\UnidadDeTrabajo.cs" />
     <Compile Include="UI\FormPrincipal.cs">

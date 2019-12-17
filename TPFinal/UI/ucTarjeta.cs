@@ -41,6 +41,7 @@ namespace TPFinal
             else
             {
                 MessageBox.Show("Se blanqueó el pin con éxito.");
+                Application.Restart();
             }
         }
     }
