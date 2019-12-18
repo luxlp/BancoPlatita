@@ -49,7 +49,7 @@ namespace TPFinal
             {
                 Usuario iUsuario=iControlador.ObtenerUsuario(this);
                 iControladorUsuario.RegistrarUsuario(iUsuario);
-                iControladorOperacion.RegistrarOperacion("Blanqueo de pin", " ", iUsuario);
+                iControladorOperacion.RegistrarOperacion("Blanqueo de pin", iControlador.ObtenerTiempoAplicacion(this), iUsuario);
                 MessageBox.Show("Se blanqueó el pin con éxito.");
                 Application.Restart();
             }

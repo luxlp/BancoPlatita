@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
+using System.Diagnostics;
 
 namespace TPFinal
 {
@@ -51,6 +52,12 @@ namespace TPFinal
             return iForm.iUsuario;
         }
 
+        public string ObtenerTiempoAplicacion(UserControl f)
+        {
+            FormPrincipal iForm;
+            iForm = (FormPrincipal)f.FindForm();
+            return iForm.iCronometro.Elapsed.ToString();
+        }
 
         public object BlanquearPin(string NumeroTarjeta)
         {

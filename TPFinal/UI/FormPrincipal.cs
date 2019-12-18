@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace TPFinal
 {
@@ -21,6 +22,7 @@ namespace TPFinal
         private bool mouseApretado;
         private Point lugarAnterior;
         public Usuario iUsuario { get; set; }
+        public Stopwatch iCronometro { get; set; } 
 
         private void panelTitular_MouseDown(object sender, MouseEventArgs e)
         {
@@ -60,6 +62,8 @@ namespace TPFinal
         // Con estos trato de manejar el flujo
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            iCronometro = new Stopwatch();
+            iCronometro.Start();
             Ayudante.CargarIngresoDni(panelTexto, buttonSiguiente);
             Ayudante.CargarTeclado(panelEntrada);
 
