@@ -21,5 +21,12 @@ namespace TPFinal.DAL.Repositorio
             Resultado = iContext.Usuario.Any(n => n.Nombre == pNombre && n.Categoria == pCategoria);
             return Resultado;
         }
+
+        public Usuario ObtenerPorNombreyCat(string pNombre, string pCategoria)
+        {
+            Usuario Resultado;
+            Resultado = iContext.Usuario.FirstOrDefault(n => n.Nombre == pNombre && n.Categoria == pCategoria);
+            return Resultado;
+        }
     }
 }

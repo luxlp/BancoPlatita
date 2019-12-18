@@ -35,6 +35,11 @@ namespace TPFinal.Controladores
             }       
         }
 
+        public bool UsuarioYaExiste(Usuario pUsuario)
+        {
+            return iUdT.RepositorioUsuario.UsuarioYaExiste(pUsuario.Nombre, pUsuario.Categoria);
+        }
+
         public void BajaUsuario(Usuario pUsuario)
         {
             iUdT.RepositorioUsuario.Eliminar(pUsuario);
@@ -44,6 +49,11 @@ namespace TPFinal.Controladores
         public Usuario ObtenerUsuario(int pId)
         {
             return iUdT.RepositorioUsuario.Obtener(pId);
+        }
+
+        public Usuario ObtenerUsuario(string pNombre, string pCategoria)
+        {
+            return iUdT.RepositorioUsuario.ObtenerPorNombreyCat(pNombre, pCategoria);
         }
 
         public IList<Usuario> ObtenerTodos()

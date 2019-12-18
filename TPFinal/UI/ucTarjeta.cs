@@ -48,7 +48,13 @@ namespace TPFinal
             else
             {
                 Usuario iUsuario=iControlador.ObtenerUsuario(this);
-                iControladorUsuario.RegistrarUsuario(iUsuario);
+                if (iControladorUsuario.UsuarioYaExiste(iUsuario))
+                    iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
+                else
+                {
+                    iControladorUsuario.RegistrarUsuario(iUsuario);
+                    iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
+                }    
                 iControladorOperacion.RegistrarOperacion("Blanqueo de pin", iControlador.ObtenerTiempoAplicacion(this), iUsuario);
                 MessageBox.Show("Se blanqueó el pin con éxito.");
                 Application.Restart();
