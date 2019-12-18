@@ -8,6 +8,7 @@ using TPFinal.Clases;
 namespace TPFinal.DAL.Interfaces
 {
     interface IRepositorioUsuario : IRepositorioGeneral<Usuario>
-    {       
+    {
+        bool UsuarioYaExiste(string pNombre, string pCategoria);
     }
 }

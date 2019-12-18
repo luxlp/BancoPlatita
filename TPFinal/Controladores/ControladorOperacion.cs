@@ -16,9 +16,9 @@ namespace TPFinal.Controladores
             iUdT = pUnidadTrabajo;
         }
 
-        public void RegistrarOperacion()
+        public void RegistrarOperacion(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario)
         {
-            Operacion iOperacion = new Operacion();
+            Operacion iOperacion = new Operacion(pTipoOperacion, pTiempoInsumido, pUsuario);
             iUdT.RepositorioOperacion.Agregar(iOperacion);
             iUdT.Guardar();
         }        

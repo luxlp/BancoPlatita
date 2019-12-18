@@ -12,6 +12,14 @@ namespace TPFinal.DAL.Repositorio
     {
         public RepositorioUsuario(ContextoBanco pContext) : base(pContext)
         {
+            
+        }
+
+        public bool UsuarioYaExiste(string pNombre, string pCategoria)
+        {
+            bool Resultado;
+            Resultado = iContext.Usuario.Any(n => n.Nombre == pNombre && n.Categoria == pCategoria);
+            return Resultado;
         }
     }
 }

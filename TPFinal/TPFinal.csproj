@@ -75,6 +75,11 @@
     <Compile Include="DAL\Repositorio\RepositorioUsuario.cs" />
     <Compile Include="DAL\Repositorio\RepositorioOperacion.cs" />
     <Compile Include="DAL\UnidadDeTrabajo.cs" />
+    <Compile Include="Migrations\201912171810070_MigracionBanco17-12.cs" />
+    <Compile Include="Migrations\201912171810070_MigracionBanco17-12.designer.cs">
+      <DependentUpon>201912171810070_MigracionBanco17-12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UI\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +145,9 @@
       <DependentUpon>ucUltimosMovimientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="Migrations\201912171810070_MigracionBanco17-12.resx">
+      <DependentUpon>201912171810070_MigracionBanco17-12.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>

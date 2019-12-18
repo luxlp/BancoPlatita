@@ -11,6 +11,8 @@ namespace TPFinal
         private string iNombre;
         private string iCategoria;
 
+        public int UsuarioId { get; set; }
+
         public string Nombre
         {
             get { return this.iNombre; }
@@ -26,6 +28,10 @@ namespace TPFinal
         {
             this.iNombre = pNombre;
             this.iCategoria = pCategoria;
+        }
+
+        public Usuario()
+        {           
         }
     }
 }

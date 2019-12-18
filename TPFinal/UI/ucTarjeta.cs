@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPFinal.Controladores;
+using TPFinal.DAL;
 
 namespace TPFinal
 {
     public partial class ucTarjeta : UserControl
     {
         private Product _tarjeta;
+        ControladorOperacion iControladorOperacion;
+        ControladorUsuario iControladorUsuario;
+        Controlador iControlador = new Controlador();
 
         public ucTarjeta()
         {
             InitializeComponent();
+            iControladorOperacion = new ControladorOperacion(UnidadDeTrabajo.Instancia);
+            iControladorUsuario = new ControladorUsuario(UnidadDeTrabajo.Instancia);
         }
 
         public Product Tarjeta
@@ -40,6 +47,9 @@ namespace TPFinal
             }
             else
             {
+                Usuario iUsuario=iControlador.ObtenerUsuario(this);
+                iControladorUsuario.RegistrarUsuario(iUsuario);
+                iControladorOperacion.RegistrarOperacion("Blanqueo de pin", " ", iUsuario);
                 MessageBox.Show("Se blanqueó el pin con éxito.");
                 Application.Restart();
             }

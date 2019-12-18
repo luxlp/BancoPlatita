@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Web;
 
 namespace TPFinal
@@ -42,6 +43,14 @@ namespace TPFinal
                 }
             }
         }
+
+        public Usuario ObtenerUsuario(UserControl f)
+        {
+            FormPrincipal iForm;
+            iForm = (FormPrincipal)f.FindForm();
+            return iForm.iUsuario;
+        }
+
 
         public object BlanquearPin(string NumeroTarjeta)
         {

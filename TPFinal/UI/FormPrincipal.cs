@@ -20,6 +20,7 @@ namespace TPFinal
         // Mover pantalla al arrastrar desde título
         private bool mouseApretado;
         private Point lugarAnterior;
+        public Usuario iUsuario { get; set; }
 
         private void panelTitular_MouseDown(object sender, MouseEventArgs e)
         {
@@ -78,10 +79,10 @@ namespace TPFinal
         private void buttonSiguienteLogin_Click(object sender, EventArgs e)
         {
             Controlador c = new Controlador();
-            Usuario u = c.Login(Ayudante.Dni, Ayudante.Pin);
-            if (u != null){
-                labelNombreUsuario.Text = $"Bienvenido {u.Nombre}";
-                labelCategoriaUsuario.Text = u.Categoria;
+            iUsuario = c.Login(Ayudante.Dni, Ayudante.Pin);
+            if (iUsuario != null){
+                labelNombreUsuario.Text = $"Bienvenido {iUsuario.Nombre}";
+                labelCategoriaUsuario.Text = iUsuario.Categoria;
                 Ayudante.MostrarContenidoPanel(panelUsuario);
 
                 Ayudante.EsconderContenidoPanel(panelContenido);

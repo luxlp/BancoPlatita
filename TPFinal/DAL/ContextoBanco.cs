@@ -11,5 +11,6 @@ namespace TPFinal.DAL
     public class ContextoBanco : DbContext
     {
         public DbSet<Operacion> Operaciones { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }
