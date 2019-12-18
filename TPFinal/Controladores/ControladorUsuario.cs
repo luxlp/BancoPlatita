@@ -18,21 +18,15 @@ namespace TPFinal.Controladores
 
         public void RegistrarUsuario(string pNombre, string pCategoria)
         {
-            if (iUdT.RepositorioUsuario.UsuarioYaExiste(pNombre,pCategoria) == false)
-            {
                 Usuario iUsuario = new Usuario(pNombre, pCategoria);
                 iUdT.RepositorioUsuario.Agregar(iUsuario);
                 iUdT.Guardar();
-            }           
         }
 
         public void RegistrarUsuario(Usuario pUsuario)
         {
-            if(iUdT.RepositorioUsuario.UsuarioYaExiste(pUsuario.Nombre,pUsuario.Categoria)==false)
-            {
                 iUdT.RepositorioUsuario.Agregar(pUsuario);
-                iUdT.Guardar();
-            }       
+                iUdT.Guardar();   
         }
 
         public bool UsuarioYaExiste(Usuario pUsuario)
