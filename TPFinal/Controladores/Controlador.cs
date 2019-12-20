@@ -14,35 +14,45 @@ namespace TPFinal
 {
     public class Controlador
     {
+        private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
+
         public Usuario Login(string DNI, string PIN)
         {
-            var mUrl = ("https://my-json-server.typicode.com/utn-frcu-isi-tdp/tas-db/clients?id=" + DNI + "&pass=" + PIN); 
-
-            // Se crea el request http
-            HttpWebRequest mRequest = (HttpWebRequest)WebRequest.Create(mUrl);
-
-            // Se ejecuta la consulta
-            WebResponse mResponse = mRequest.GetResponse();
-
-            // Se obtiene los datos de respuesta
-            using (Stream responseStream = mResponse.GetResponseStream())
+            var mUrl = ("https://my-json-server.typicode.com/utn-frcu-isi-tdp/tas-db/clients?id=" + DNI + "&pass=" + PIN);
+            try
             {
-                StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
+                // Se crea el request http
+                HttpWebRequest mRequest = (HttpWebRequest)WebRequest.Create(mUrl);
 
-                // Se parsea la respuesta y se serializa a JSON a un objeto dynamic
-                dynamic mResponseJSON = JsonConvert.DeserializeObject(reader.ReadToEnd());
+                // Se ejecuta la consulta
+                WebResponse mResponse = mRequest.GetResponse();
 
-                if (mResponseJSON.Count >= 1)
+                // Se obtiene los datos de respuesta
+                using (Stream responseStream = mResponse.GetResponseStream())
                 {
-                    string iNombre = mResponseJSON[0].response.client.name;
-                    string iCategoria = mResponseJSON[0].response.client.segment;
-                    return new Usuario(iNombre, iCategoria);
-                }
-                else
-                {
-                    return null;
+                    StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
+
+                    // Se parsea la respuesta y se serializa a JSON a un objeto dynamic
+                    dynamic mResponseJSON = JsonConvert.DeserializeObject(reader.ReadToEnd());
+
+                    if (mResponseJSON.Count >= 1)
+                    {
+                        string iNombre = mResponseJSON[0].response.client.name;
+                        string iCategoria = mResponseJSON[0].response.client.segment;
+                        return new Usuario(iNombre, iCategoria);
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new TimeoutException(ex.Message); //O alguna otra
+            }
+            
         }
 
         public Usuario ObtenerUsuario(UserControl f)

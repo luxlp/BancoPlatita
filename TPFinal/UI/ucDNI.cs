@@ -12,6 +12,9 @@ namespace TPFinal
 {
     public partial class ucDni : UserControl
     {
+        private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
+
         private static ucDni _instancia;
         private static ButtonBase _botonSiguiente;
 
@@ -19,8 +22,10 @@ namespace TPFinal
 
         public ucDni()
         {
+            log.Debug("Inicializando ucDni...");
             InitializeComponent();
             CajaTexto = maskedTextBox;
+            log.Debug("ucDni inicializado.");
         }
 
         public static ucDni Instancia

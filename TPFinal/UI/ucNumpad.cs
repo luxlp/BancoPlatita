@@ -12,6 +12,9 @@ namespace TPFinal
 {
     public partial class ucNumpad : UserControl
     {
+        private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
+
         public static TextBoxBase CajaTexto { get; set; }
 
         public static int Limite { get; set; }
@@ -38,12 +41,15 @@ namespace TPFinal
         /// </summary>
         public ucNumpad()
         {
+            log.Debug("Inicializando ucNumpad...");
             InitializeComponent();
+            log.Debug("ucNumpad inicializado.");
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             CajaTexto.Text = null;
+            log.Debug("Texto limpiado.");
         }
 
         private void buttonBorrar_Click(object sender, EventArgs e)
@@ -53,6 +59,7 @@ namespace TPFinal
             if (s.Length > 1)
             {
                 s = s.Substring(0, s.Length - 1);
+                log.Debug("Se borro un caracter.");
             }
             else
             {
@@ -65,6 +72,7 @@ namespace TPFinal
         {
             Button iButton = sender as Button;
             CajaTexto.Text += iButton.Text;
+            log.Debug("Se ingreso " + iButton.Text);
         }
     }
 }

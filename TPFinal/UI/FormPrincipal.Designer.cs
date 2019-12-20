@@ -32,7 +32,7 @@
             this.panelTitular = new System.Windows.Forms.Panel();
             this.buttonCerrar = new System.Windows.Forms.Button();
             this.buttonMinimizar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.panelTexto = new System.Windows.Forms.Panel();
             this.buttonSiguiente = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,7 +63,7 @@
             this.panelTitular.BackColor = System.Drawing.Color.Indigo;
             this.panelTitular.Controls.Add(this.buttonCerrar);
             this.panelTitular.Controls.Add(this.buttonMinimizar);
-            this.panelTitular.Controls.Add(this.label1);
+            this.panelTitular.Controls.Add(this.labelTitulo);
             this.panelTitular.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelTitular.Location = new System.Drawing.Point(0, 0);
             this.panelTitular.Name = "panelTitular";
@@ -109,17 +109,17 @@
             this.buttonMinimizar.UseVisualStyleBackColor = false;
             this.buttonMinimizar.Click += new System.EventHandler(this.buttonMinimizar_Click);
             // 
-            // label1
+            // labelTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BANCO PLATITA";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.White;
+            this.labelTitulo.Location = new System.Drawing.Point(64, 38);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(269, 45);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "BANCO PLATITA";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelTexto
             // 
@@ -234,7 +234,7 @@
         #endregion
         private System.Windows.Forms.Panel panelEntrada;
         private System.Windows.Forms.Panel panelTitular;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.Button buttonMinimizar;
         private System.Windows.Forms.Panel panelTexto;
