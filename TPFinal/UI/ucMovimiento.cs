@@ -12,11 +12,16 @@ namespace TPFinal
 {
     public partial class ucMovimiento : UserControl
     {
+        private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
+
         private Movement _movimiento;
 
         public ucMovimiento()
         {
+            log.Debug("Inicializando ucMovimiento...");
             InitializeComponent();
+            log.Debug("ucMovimiento inicializado.");
         }
 
         public Movement Movimiento

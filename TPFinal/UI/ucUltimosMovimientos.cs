@@ -14,6 +14,9 @@ namespace TPFinal
 {
     public partial class ucUltimosMovimientos : UserControl
     {
+        private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
+
         private static ucUltimosMovimientos _instancia;
 
         private List<Movement> _movimientos;
@@ -24,9 +27,11 @@ namespace TPFinal
 
         public ucUltimosMovimientos()
         {
+            log.Debug("Inicializando ucUltimosMovimientos...");
             InitializeComponent();
             iControladorOperacion = new ControladorOperacion(UnidadDeTrabajo.Instancia);
-            iControladorUsuario = new ControladorUsuario(UnidadDeTrabajo.Instancia);            
+            iControladorUsuario = new ControladorUsuario(UnidadDeTrabajo.Instancia);
+            log.Debug("ucUltimosMovimientos inicializado.");
         }
 
         public static ucUltimosMovimientos Instancia
@@ -52,6 +57,7 @@ namespace TPFinal
 
         private void CargarMovimientos()
         {
+            log.Debug("Cargando movimientos...");
             foreach (Movement m in _movimientos)
             {
                 ucMovimiento movimiento = new ucMovimiento();
@@ -60,8 +66,10 @@ namespace TPFinal
                 movimiento.BringToFront();
                 tableLayoutPanel2.Controls.Add(movimiento);
             }
+            log.Info("Movimientos cargados.");
 
-            //Se cargan la operacion en la base de datos una vez finalizados de cargar los datos en pantalla
+            //Se carga la operacion en la base de datos una vez finalizados de cargar los datos en pantalla
+            log.Debug("Registrando tiempo...");
             Usuario iUsuario = iControlador.ObtenerUsuario(this);
             if (iControladorUsuario.UsuarioYaExiste(iUsuario))
                 iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
@@ -71,10 +79,12 @@ namespace TPFinal
                 iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
             }
             iControladorOperacion.RegistrarOperacion("Consulta ultimos movimientos", iControlador.ObtenerTiempoAplicacion(this), iUsuario);
+            log.Debug("Tiempo registrado.");
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
+            log.Debug("Saliendo de aplicación...");
             Application.Restart();
         }
     }
