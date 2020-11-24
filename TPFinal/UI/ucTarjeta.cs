@@ -17,7 +17,7 @@ namespace TPFinal
         private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
 
-        private Product _tarjeta;
+        private Producto _tarjeta;
         ControladorOperacion iControladorOperacion;
         ControladorUsuario iControladorUsuario;
         Controlador iControlador = new Controlador();
@@ -31,14 +31,14 @@ namespace TPFinal
             log.Debug("ucTarjeta inicializado.");
         }
 
-        public Product Tarjeta
+        public Producto Tarjeta
         {
             set
             {
                 this._tarjeta = value;
-                labelNombre.Text = this._tarjeta.name;
-                labelNumero.Text = this._tarjeta.number;
-                labelTipo.Text = this._tarjeta.type;
+                labelNombre.Text = this._tarjeta.nombre;
+                labelNumero.Text = this._tarjeta.numero;
+                labelTipo.Text = this._tarjeta.tipo;
             }
         }
 
@@ -46,7 +46,7 @@ namespace TPFinal
         {
             log.Debug("Blanqueando Pin...");
             Controlador c = new Controlador();
-            Object o = c.BlanquearPin(this._tarjeta.number);
+            Object o = c.BlanquearPin(this._tarjeta.numero);
             if (o == null)
             {
                 log.Error("Error al blanquear Pin.");

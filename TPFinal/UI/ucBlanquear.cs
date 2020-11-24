@@ -16,7 +16,7 @@ namespace TPFinal
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
 
         private static ucBlanquear _instancia;
-        private List<Product> _tarjetas;
+        private List<Producto> _tarjetas;
 
         public ucBlanquear()
         {
@@ -37,7 +37,7 @@ namespace TPFinal
             }
         }
 
-        public List<Product> Tarjetas
+        public List<Producto> Tarjetas
         {
             set
             {
@@ -49,7 +49,7 @@ namespace TPFinal
         private void CargarTarjetas()
         {
             log.Debug("Cargando tarjetas...");
-            foreach (Product t in _tarjetas)
+            foreach (Producto t in _tarjetas)
             {
                 ucTarjeta tarjeta = new ucTarjeta();
                 tarjeta.Tarjeta = t;

@@ -29,10 +29,10 @@ namespace TPFinal
             set
             {
                 this._movimiento = value;
-                labelFecha.Text = this._movimiento.date;
-                labelMonto.Text = Convert.ToString(this._movimiento.amount);
+                labelFecha.Text = this._movimiento.fecha;
+                labelMonto.Text = Convert.ToString(this._movimiento.cantidad);
                 
-                if (this._movimiento.amount < 0)
+                if (this._movimiento.cantidad < 0)
                 {
                     labelMonto.ForeColor = Color.DarkRed;
                 }
