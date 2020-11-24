@@ -38,7 +38,7 @@ namespace TPFinal
 
                     if (mResponseJSON.Count >= 1)
                     {
-                        string iNombre = mResponseJSON[0].response.client.name;
+                        string iNombre = mResponseJSON[0].response.client.nombre;
                         string iCategoria = mResponseJSON[0].response.client.segment;
                         return new Usuario(iNombre, iCategoria);
                     }
@@ -50,7 +50,7 @@ namespace TPFinal
             }
             catch (Exception ex)
             {
-                throw new TimeoutException(ex.Message); //O alguna otra
+                throw new TimeoutException(ex.Message); 
             }
             
         }
@@ -98,7 +98,7 @@ namespace TPFinal
             }
         }
 
-        public List<Product> ObtenerTarjetas(string DNI)
+        public List<Producto> ObtenerTarjetas(string DNI)
         {
             var mUrl = ("https://my-json-server.typicode.com/utn-frcu-isi-tdp/tas-db/products?id=" + DNI);
 
@@ -118,13 +118,13 @@ namespace TPFinal
 
                 if (mResponseJSON.Count >= 1)
                 {
-                    List<Product> iLista = new List<Product>();
+                    List<Producto> iLista = new List<Producto>();
                     foreach (var obj in mResponseJSON[0].response.product)
                     {
-                        string iNumero = obj.number;
-                        string iNombre = obj.name;
-                        string iTipo = obj.type;
-                        Product iTarjeta = new Product(iNumero, iNombre, iTipo);
+                        string iNumero = obj.numero;
+                        string iNombre = obj.nombre;
+                        string iTipo = obj.tipo;
+                        Producto iTarjeta = new Producto(iNumero, iNombre, iTipo);
                         iLista.Add(iTarjeta);
                     }
                     return iLista;
@@ -166,7 +166,7 @@ namespace TPFinal
             }
         }
 
-        public List<Movement> UltimosMovimientos(string DNI)
+        public List<Movimiento> UltimosMovimientos(string DNI)
         {
             var mUrl = ("https://my-json-server.typicode.com/utn-frcu-isi-tdp/tas-db/account-movements?id=" + DNI);
 
@@ -186,12 +186,12 @@ namespace TPFinal
 
                 if (mResponseJSON.Count >= 1)
                 {
-                    List<Movement> iLista = new List<Movement>();
+                    List<Movimiento> iLista = new List<Movimiento>();
                     foreach (var obj in mResponseJSON[0].response.movements)
                     {
-                        string iDate = obj.date;
-                        float iAmount = obj.ammount;
-                        Movement iMovimiento = new Movement(iDate, iAmount);
+                        string iFecha = obj.fecha;
+                        float iCantidad = obj.cantidad;
+                        Movimiento iMovimiento = new Movimiento(iFecha, iCantidad);
                         iLista.Add(iMovimiento);
                     }
                     return iLista;

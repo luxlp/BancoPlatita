@@ -106,7 +106,7 @@ namespace TPFinal
         {
             log.Debug("Cargando tarjetas...");
             Controlador c = new Controlador();
-            List<Product> t = c.ObtenerTarjetas(Dni);
+            List<Producto> t = c.ObtenerTarjetas(Dni);
             if (t != null)
             {
                 ucBlanquear blanq = ucBlanquear.Instancia;
@@ -130,7 +130,7 @@ namespace TPFinal
         {
             log.Debug("Cargando movimientos...");
             Controlador c = new Controlador();
-            List<Movement> m = c.UltimosMovimientos(Dni);
+            List<Movimiento> m = c.UltimosMovimientos(Dni);
             if (m != null)
             {
                 ucUltimosMovimientos ultmov = ucUltimosMovimientos.Instancia;

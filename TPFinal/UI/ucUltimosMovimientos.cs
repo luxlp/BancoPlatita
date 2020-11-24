@@ -19,7 +19,7 @@ namespace TPFinal
 
         private static ucUltimosMovimientos _instancia;
 
-        private List<Movement> _movimientos;
+        private List<Movimiento> _movimientos;
 
         ControladorOperacion iControladorOperacion;
         ControladorUsuario iControladorUsuario;
@@ -46,7 +46,7 @@ namespace TPFinal
             }
         }
 
-        public List<Movement> Movimientos
+        public List<Movimiento> Movimientos
         {
             set
             {
@@ -58,7 +58,7 @@ namespace TPFinal
         private void CargarMovimientos()
         {
             log.Debug("Cargando movimientos...");
-            foreach (Movement m in _movimientos)
+            foreach (Movimiento m in _movimientos)
             {
                 ucMovimiento movimiento = new ucMovimiento();
                 movimiento.Movimiento = m;

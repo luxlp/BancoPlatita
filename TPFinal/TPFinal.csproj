@@ -89,10 +89,10 @@
     <Compile Include="UI\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Movement.cs" />
+    <Compile Include="Clases\Movimiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Clases\Product.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="UI\ucBlanquear.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,9 +150,11 @@
     <Compile Include="Clases\Usuario.cs" />
     <EmbeddedResource Include="Migrations\201912171810070_MigracionBanco17-12.resx">
       <DependentUpon>201912171810070_MigracionBanco17-12.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,30 +167,39 @@
     </Compile>
     <EmbeddedResource Include="UI\ucBlanquear.resx">
       <DependentUpon>ucBlanquear.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucDni.resx">
       <DependentUpon>ucDni.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucMovimiento.resx">
       <DependentUpon>ucMovimiento.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucNumpad.resx">
       <DependentUpon>ucNumpad.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucOperaciones.resx">
       <DependentUpon>ucOperaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucPin.resx">
       <DependentUpon>ucPin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucSaldo.resx">
       <DependentUpon>ucSaldo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucTarjeta.resx">
       <DependentUpon>ucTarjeta.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ucUltimosMovimientos.resx">
       <DependentUpon>ucUltimosMovimientos.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

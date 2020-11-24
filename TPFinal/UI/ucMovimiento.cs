@@ -15,7 +15,7 @@ namespace TPFinal
         private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
 
-        private Movement _movimiento;
+        private Movimiento _movimiento;
 
         public ucMovimiento()
         {
@@ -24,7 +24,7 @@ namespace TPFinal
             log.Debug("ucMovimiento inicializado.");
         }
 
-        public Movement Movimiento
+        public Movimiento Movimiento
         {
             set
             {
