@@ -38,7 +38,7 @@ namespace TPFinal
 
                     if (mResponseJSON.Count >= 1)
                     {
-                        string iNombre = mResponseJSON[0].response.client.nombre;
+                        string iNombre = mResponseJSON[0].response.client.name;
                         string iCategoria = mResponseJSON[0].response.client.segment;
                         return new Usuario(iNombre, iCategoria);
                     }
@@ -121,9 +121,9 @@ namespace TPFinal
                     List<Producto> iLista = new List<Producto>();
                     foreach (var obj in mResponseJSON[0].response.product)
                     {
-                        string iNumero = obj.numero;
-                        string iNombre = obj.nombre;
-                        string iTipo = obj.tipo;
+                        string iNumero = obj.number;
+                        string iNombre = obj.name;
+                        string iTipo = obj.type;
                         Producto iTarjeta = new Producto(iNumero, iNombre, iTipo);
                         iLista.Add(iTarjeta);
                     }
@@ -189,8 +189,8 @@ namespace TPFinal
                     List<Movimiento> iLista = new List<Movimiento>();
                     foreach (var obj in mResponseJSON[0].response.movements)
                     {
-                        string iFecha = obj.fecha;
-                        float iCantidad = obj.cantidad;
+                        string iFecha = obj.date;
+                        float iCantidad = obj.ammount;
                         Movimiento iMovimiento = new Movimiento(iFecha, iCantidad);
                         iLista.Add(iMovimiento);
                     }
