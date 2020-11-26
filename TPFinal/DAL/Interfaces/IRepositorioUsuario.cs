@@ -11,5 +11,7 @@ namespace TPFinal.DAL.Interfaces
     {
         bool UsuarioYaExiste(string pNombre, string pCategoria);
         Usuario ObtenerPorNombreyCat(string pNombre, string pCategoria);
+
+        void Agregar(string pNombre, string pCategoria);
     }
 }

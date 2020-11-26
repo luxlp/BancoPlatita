@@ -28,5 +28,11 @@ namespace TPFinal.DAL.Repositorio
             Resultado = iContext.Usuario.FirstOrDefault(n => n.Nombre == pNombre && n.Categoria == pCategoria);
             return Resultado;
         }
+
+        public void Agregar(string pNombre,string  pCategoria)
+        {
+            Usuario iUsuario = new Usuario(pNombre, pCategoria);
+            this.iContext.Set<Usuario>().Add(iUsuario);
+        }
     }
 }

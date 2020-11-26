@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TPFinal.DAL;
-using TPFinal.Clases;
+
 
 namespace TPFinal.Controladores
 {
@@ -16,43 +12,21 @@ namespace TPFinal.Controladores
             iUdT = pUnidadTrabajo;
         }
 
-        public void RegistrarUsuario(string pNombre, string pCategoria)
-        {
-                Usuario iUsuario = new Usuario(pNombre, pCategoria);
-                iUdT.RepositorioUsuario.Agregar(iUsuario);
-                iUdT.Guardar();
-        }
-
-        public void RegistrarUsuario(Usuario pUsuario)
-        {
-                iUdT.RepositorioUsuario.Agregar(pUsuario);
-                iUdT.Guardar();   
-        }
-
-        public bool UsuarioYaExiste(Usuario pUsuario)
-        {
-            return iUdT.RepositorioUsuario.UsuarioYaExiste(pUsuario.Nombre, pUsuario.Categoria);
-        }
-
-        public void BajaUsuario(Usuario pUsuario)
-        {
-            iUdT.RepositorioUsuario.Eliminar(pUsuario);
-            iUdT.Guardar();
-        }
-
-        public Usuario ObtenerUsuario(int pId)
-        {
-            return iUdT.RepositorioUsuario.Obtener(pId);
-        }
-
+          
+      
         public Usuario ObtenerUsuario(string pNombre, string pCategoria)
         {
+            
+            
+            if (iUdT.RepositorioUsuario.UsuarioYaExiste(pNombre, pCategoria) == false)
+            {
+                iUdT.RepositorioUsuario.Agregar(pNombre, pCategoria);
+                iUdT.Guardar();
+            }
+            
             return iUdT.RepositorioUsuario.ObtenerPorNombreyCat(pNombre, pCategoria);
+           
         }
 
-        public IList<Usuario> ObtenerTodos()
-        {
-            return iUdT.RepositorioUsuario.ObtenerTodos();
-        }
     }
 }
