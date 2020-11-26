@@ -18,25 +18,8 @@ namespace TPFinal.Controladores
 
         public void RegistrarOperacion(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario)
         {
-            Operacion iOperacion = new Operacion(pTipoOperacion, pTiempoInsumido, pUsuario);
-            iUdT.RepositorioOperacion.Agregar(iOperacion);
+            iUdT.RepositorioOperacion.Agregar(pTipoOperacion, pTiempoInsumido, pUsuario);
             iUdT.Guardar();
         }        
-
-        public void BajaOperacion(Operacion pOperacion)
-        {
-            iUdT.RepositorioOperacion.Eliminar(pOperacion);
-            iUdT.Guardar();
-        }
-
-        public Operacion ObtenerOperacion(int pId)
-        {
-            return iUdT.RepositorioOperacion.Obtener(pId);
-        }
-
-        public IList<Operacion> ObtenerTodos()
-        {
-            return iUdT.RepositorioOperacion.ObtenerTodos();
-        }
     }
 }

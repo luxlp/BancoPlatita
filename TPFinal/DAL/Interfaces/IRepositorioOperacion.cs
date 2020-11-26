@@ -8,6 +8,8 @@ using TPFinal.Clases;
 namespace TPFinal.DAL.Interfaces
 {
     interface IRepositorioOperacion : IRepositorioGeneral<Operacion>
-    {       
+    {
+        void Agregar(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario);
+        void Eliminar(int pOperacionId);
     }
 }
