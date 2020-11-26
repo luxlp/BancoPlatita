@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TPFinal.DAL.Interfaces;
+using TPFinal.DTO;
 using TPFinal.Clases;
 
 namespace TPFinal.DAL.Repositorio
@@ -33,6 +34,18 @@ namespace TPFinal.DAL.Repositorio
         {
             Usuario iUsuario = new Usuario(pNombre, pCategoria);
             this.iContext.Set<Usuario>().Add(iUsuario);
+        }
+
+        public Usuario ConvertirAEntidad(DTOUsuario pDTOUsuario)
+        {
+            Usuario iUsuario = new Usuario(pDTOUsuario.Nombre, pDTOUsuario.Categoria);
+            return iUsuario;
+        }
+
+        public DTOUsuario ConvertirADTO(Usuario pUsuario)
+        {
+            DTOUsuario iDTOUsuario = new DTOUsuario(pUsuario.Nombre, pUsuario.Categoria);
+            return iDTOUsuario;
         }
     }
 }
