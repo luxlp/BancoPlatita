@@ -78,6 +78,7 @@
     <Compile Include="DAL\Repositorio\RepositorioUsuario.cs" />
     <Compile Include="DAL\Repositorio\RepositorioOperacion.cs" />
     <Compile Include="DAL\UnidadDeTrabajo.cs" />
+    <Compile Include="DTO\DTOOperacion.cs" />
     <Compile Include="DTO\DTOUsuario.cs" />
     <Compile Include="Migrations\201912171810070_MigracionBanco17-12.cs" />
     <Compile Include="Migrations\201912171810070_MigracionBanco17-12.designer.cs">

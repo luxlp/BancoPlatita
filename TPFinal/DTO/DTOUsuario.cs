@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPFinal.DTO
 {
-    class DTOUsuario
+    public class DTOUsuario
     {
 
         private string iNombre;
