@@ -19,8 +19,7 @@ namespace TPFinal.Controladores
 
         public void RegistrarOperacion(string pTipoOperacion, string pTiempoInsumido, DTOUsuario pUsuario)
         {
-            Usuario iUsuario = iUdT.RepositorioUsuario.ConvertirAEntidad(pUsuario);
-            iUdT.RepositorioOperacion.Agregar(pTipoOperacion, pTiempoInsumido, iUsuario);
+            iUdT.RepositorioOperacion.Agregar(pTipoOperacion, pTiempoInsumido, pUsuario);
             iUdT.Guardar();
         }        
     }

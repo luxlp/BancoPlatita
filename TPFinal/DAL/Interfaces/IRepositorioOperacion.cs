@@ -10,7 +10,7 @@ namespace TPFinal.DAL.Interfaces
 {
     interface IRepositorioOperacion : IRepositorioGeneral<Operacion>
     {
-        void Agregar(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario);
+        void Agregar(string pTipoOperacion, string pTiempoInsumido, DTOUsuario pUsuario);
         void Eliminar(int pOperacionId);
     }
 }
