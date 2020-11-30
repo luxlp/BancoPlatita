@@ -15,11 +15,11 @@ namespace TPFinal.DAL.Repositorio
         {
             
         }
-        private RepositorioUsuario iRepositorioUsuario;
-        public void Agregar(string pTipoOperacion, string pTiempoInsumido, DTOUsuario pUsuario)
+            
+
+        public void Agregar(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario)
         {
-            Usuario iUsuario=iRepositorioUsuario.ConvertirAEntidad(pUsuario);
-            Operacion iOperacion = new Operacion(pTipoOperacion, pTiempoInsumido, iUsuario);
+            Operacion iOperacion = new Operacion(pTipoOperacion, pTiempoInsumido, pUsuario);
             this.iContext.Set<Operacion>().Add(iOperacion);
         }
 

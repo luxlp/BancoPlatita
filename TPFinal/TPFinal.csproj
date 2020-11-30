@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Operacion.cs" />
-    <Compile Include="Controladores\Ayudante.cs" />
+    <Compile Include="Fachada\Ayudante.cs" />
     <Compile Include="Fachada\Fachada.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Controladores\ControladorOperacion.cs" />

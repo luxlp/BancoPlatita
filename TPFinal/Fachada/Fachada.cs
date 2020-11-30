@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using TPFinal.DTO;
 
-namespace TPFinal
+namespace TPFinal.Fachada
 {
     public class Fachada
     {
