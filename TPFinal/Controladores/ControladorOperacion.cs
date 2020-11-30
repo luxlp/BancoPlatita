@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TPFinal.DAL;
 using TPFinal.Clases;
+using TPFinal.DTO;
 
 namespace TPFinal.Controladores
 {
@@ -16,7 +17,7 @@ namespace TPFinal.Controladores
             iUdT = pUnidadTrabajo;
         }
 
-        public void RegistrarOperacion(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario)
+        public void RegistrarOperacion(string pTipoOperacion, string pTiempoInsumido, DTOUsuario pUsuario)
         {
             iUdT.RepositorioOperacion.Agregar(pTipoOperacion, pTiempoInsumido, pUsuario);
             iUdT.Guardar();
