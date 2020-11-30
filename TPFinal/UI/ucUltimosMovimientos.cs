@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPFinal.Controladores;
 using TPFinal.DAL;
+using TPFinal.DTO;
 
 namespace TPFinal
 {
@@ -70,11 +71,11 @@ namespace TPFinal
 
             //Se carga la operacion en la base de datos una vez finalizados de cargar los datos en pantalla
             log.Debug("Registrando tiempo...");
-            Usuario iUsuario = iControlador.ObtenerUsuario(this);
+            DTOUsuario iUsuario = iFachada.ObtenerUsuario(this);
             
             iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
             
-            iControladorOperacion.RegistrarOperacion("Consulta ultimos movimientos", iControlador.ObtenerTiempoAplicacion(this), iUsuario);
+            iControladorOperacion.RegistrarOperacion("Consulta ultimos movimientos", iFachada.ObtenerTiempoAplicacion(this), iUsuario);
             log.Debug("Tiempo registrado.");
         }
 
