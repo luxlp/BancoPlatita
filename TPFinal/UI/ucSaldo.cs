@@ -67,7 +67,7 @@ namespace TPFinal
             
             iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
             
-            iControladorOperacion.RegistrarOperacion("Consulta saldo", iControlador.ObtenerTiempoAplicacion(this), iUsuario);
+            iControladorOperacion.RegistrarOperacion("Consulta saldo", iFachada.ObtenerTiempoAplicacion(this), iUsuario);
             log.Debug("Tiempo registrado.");
         }
 

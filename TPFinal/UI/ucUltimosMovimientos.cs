@@ -23,7 +23,7 @@ namespace TPFinal
 
         ControladorOperacion iControladorOperacion;
         ControladorUsuario iControladorUsuario;
-        Controlador iControlador = new Controlador();
+        Fachada iFachada = new Fachada();
 
         public ucUltimosMovimientos()
         {

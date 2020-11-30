@@ -17,7 +17,7 @@ namespace TPFinal
         private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
 
-        private Fachada c = new Fachada();
+        private Fachada iFachada = new Fachada();
 
         public FormPrincipal()
         {
@@ -28,7 +28,7 @@ namespace TPFinal
 
 
 
-        // Mover pantalla al arrastrar desde título
+
         private bool mouseApretado;
         private Point lugarAnterior;
         public DTOUsuario iUsuario { get; set; }
@@ -55,9 +55,7 @@ namespace TPFinal
                 this.Update();
             }
         }
-        // ---.
 
-        // Para uso durante desarrollo
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
             log.Debug("Saliendo de aplicación...");
@@ -102,7 +100,7 @@ namespace TPFinal
         private void buttonSiguienteLogin_Click(object sender, EventArgs e)
         {
             log.Debug("Cargando Usuario...");
-            iUsuario = c.Login(Ayudante.Dni, Ayudante.Pin);
+            iUsuario = iFachada.Login(Ayudante.Dni, Ayudante.Pin);
             log.Debug("Usuario cargado.");
 
             if (iUsuario != null){
@@ -127,13 +125,6 @@ namespace TPFinal
             }
         }
 
-        // TO-DO
-        /*
-        private void buttonAnteriorPin_Click(object sender, EventArgs e)
-        {
-            Ayudante.EsconderContenidoPanel(panelContenido);
-            Ayudante.CargarOperaciones(panelContenido);
-        }
-        */
+     
     }
 }

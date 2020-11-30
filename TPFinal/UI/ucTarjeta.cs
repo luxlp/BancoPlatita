@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TPFinal.Controladores;
 using TPFinal.DAL;
+using TPFinal.DTO;
 
 namespace TPFinal
 {
@@ -20,7 +21,7 @@ namespace TPFinal
         private Producto _tarjeta;
         ControladorOperacion iControladorOperacion;
         ControladorUsuario iControladorUsuario;
-        Controlador iControlador = new Controlador();
+        Fachada iFachada = new Fachada();
 
         public ucTarjeta()
         {
@@ -45,8 +46,8 @@ namespace TPFinal
         private void buttonBlanquearPin_Click(object sender, EventArgs e)
         {
             log.Debug("Blanqueando Pin...");
-            Controlador c = new Controlador();
-            Object o = c.BlanquearPin(this._tarjeta.numero);
+            Fachada iFachada = new Fachada();
+            Object o = iFachada.BlanquearPin(this._tarjeta.numero);
             if (o == null)
             {
                 log.Error("Error al blanquear Pin.");
@@ -56,11 +57,11 @@ namespace TPFinal
             {
                 log.Info("Pin blanqueado.");
                 log.Debug("Registrando tiempo...");
-                Usuario iUsuario=iControlador.ObtenerUsuario(this);
+                DTOUsuario iUsuario= iFachada.ObtenerUsuario(this);
                 
                 iUsuario = iControladorUsuario.ObtenerUsuario(iUsuario.Nombre, iUsuario.Categoria);
                  
-                iControladorOperacion.RegistrarOperacion("Blanqueo de pin", iControlador.ObtenerTiempoAplicacion(this), iUsuario);
+                iControladorOperacion.RegistrarOperacion("Blanqueo de pin", iFachada.ObtenerTiempoAplicacion(this), iUsuario);
                 log.Debug("Tiempo registrado.");
                 MessageBox.Show("Se blanqueó el pin con éxito.");
 
