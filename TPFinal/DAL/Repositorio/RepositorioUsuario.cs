@@ -23,11 +23,11 @@ namespace TPFinal.DAL.Repositorio
             return Resultado;
         }
 
-        public Usuario ObtenerPorNombreyCat(string pNombre, string pCategoria)
+        public DTOUsuario ObtenerPorNombreyCat(string pNombre, string pCategoria)
         {
             Usuario Resultado;
             Resultado = iContext.Usuario.FirstOrDefault(n => n.Nombre == pNombre && n.Categoria == pCategoria);
-            return Resultado;
+            return ConvertirADTO(Resultado);
         }
 
         public void Agregar(string pNombre,string  pCategoria)

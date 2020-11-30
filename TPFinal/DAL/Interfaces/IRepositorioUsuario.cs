@@ -11,7 +11,7 @@ namespace TPFinal.DAL.Interfaces
     interface IRepositorioUsuario : IRepositorioGeneral<Usuario>
     {
         bool UsuarioYaExiste(string pNombre, string pCategoria);
-        Usuario ObtenerPorNombreyCat(string pNombre, string pCategoria);
+        DTOUsuario ObtenerPorNombreyCat(string pNombre, string pCategoria);
 
         void Agregar(string pNombre, string pCategoria);
 
