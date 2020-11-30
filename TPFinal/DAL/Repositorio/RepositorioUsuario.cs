@@ -38,7 +38,7 @@ namespace TPFinal.DAL.Repositorio
 
         public Usuario ConvertirAEntidad(DTOUsuario pDTOUsuario)
         {
-            Usuario iUsuario = new Usuario(pDTOUsuario.Nombre, pDTOUsuario.Categoria);
+            Usuario iUsuario = iContext.Usuario.FirstOrDefault(n => n.Nombre == pDTOUsuario.Nombre && n.Categoria == pDTOUsuario.Categoria);
             return iUsuario;
         }
 

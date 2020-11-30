@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TPFinal.DAL.Interfaces;
 using TPFinal.Clases;
+using TPFinal.DTO;
 
 namespace TPFinal.DAL.Repositorio
 {
@@ -14,9 +15,11 @@ namespace TPFinal.DAL.Repositorio
         {
             
         }
-        public void Agregar(string pTipoOperacion, string pTiempoInsumido, Usuario pUsuario)
+        private RepositorioUsuario iRepositorioUsuario;
+        public void Agregar(string pTipoOperacion, string pTiempoInsumido, DTOUsuario pUsuario)
         {
-            Operacion iOperacion = new Operacion(pTipoOperacion, pTiempoInsumido, pUsuario);
+            Usuario iUsuario=iRepositorioUsuario.ConvertirAEntidad(pUsuario);
+            Operacion iOperacion = new Operacion(pTipoOperacion, pTiempoInsumido, iUsuario);
             this.iContext.Set<Operacion>().Add(iOperacion);
         }
 
