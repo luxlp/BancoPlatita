@@ -66,7 +66,7 @@
   <ItemGroup>
     <Compile Include="Clases\Operacion.cs" />
     <Compile Include="Controladores\Ayudante.cs" />
-    <Compile Include="Controladores\Controlador.cs" />
+    <Compile Include="Controladores\Fachada.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Controladores\ControladorOperacion.cs" />
     <Compile Include="DAL\ContextoBanco.cs" />

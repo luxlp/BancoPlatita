@@ -105,7 +105,7 @@ namespace TPFinal
         public static void CargarTarjetas(Panel p)
         {
             log.Debug("Cargando tarjetas...");
-            Controlador c = new Controlador();
+            Fachada c = new Fachada();
             List<Producto> t = c.ObtenerTarjetas(Dni);
             if (t != null)
             {
@@ -129,7 +129,7 @@ namespace TPFinal
         public static void CargarMovimientos(Panel p)
         {
             log.Debug("Cargando movimientos...");
-            Controlador c = new Controlador();
+            Fachada c = new Fachada();
             List<Movimiento> m = c.UltimosMovimientos(Dni);
             if (m != null)
             {
@@ -153,7 +153,7 @@ namespace TPFinal
         public static void CargarSaldo(Panel p)
         {
             log.Debug("Cargando saldo...");
-            Controlador c = new Controlador();
+            Fachada c = new Fachada();
             float? s = c.SaldoCuentaCorriente(Dni);
             if (s != null)
             {

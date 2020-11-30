@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using TPFinal.DTO;
 
 namespace TPFinal
 {
@@ -16,6 +17,8 @@ namespace TPFinal
         private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
 
+        private Fachada c = new Fachada();
+
         public FormPrincipal()
         {
             log.Debug("Inicializando FormPrincipal...");
@@ -23,10 +26,12 @@ namespace TPFinal
             log.Debug("FormPrincipal inicializado.");
         }
 
+
+
         // Mover pantalla al arrastrar desde título
         private bool mouseApretado;
         private Point lugarAnterior;
-        public Usuario iUsuario { get; set; }
+        public DTOUsuario iUsuario { get; set; }
         public Stopwatch iCronometro { get; set; } 
 
         private void panelTitular_MouseDown(object sender, MouseEventArgs e)
@@ -63,9 +68,9 @@ namespace TPFinal
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        // ---.
+        
 
-        // Con estos trato de manejar el flujo
+        
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             iCronometro = new Stopwatch();
@@ -97,7 +102,6 @@ namespace TPFinal
         private void buttonSiguienteLogin_Click(object sender, EventArgs e)
         {
             log.Debug("Cargando Usuario...");
-            Controlador c = new Controlador();
             iUsuario = c.Login(Ayudante.Dni, Ayudante.Pin);
             log.Debug("Usuario cargado.");
 

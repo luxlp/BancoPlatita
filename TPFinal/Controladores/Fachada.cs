@@ -9,12 +9,12 @@ using TPFinal.DTO;
 
 namespace TPFinal
 {
-    public class Controlador
+    public class Fachada
     {
         private static readonly Type refleccion = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(refleccion);
 
-        public Usuario Login(string DNI, string PIN)
+        public DTOUsuario Login(string DNI, string PIN)
         {
             var mUrl = ("https://my-json-server.typicode.com/utn-frcu-isi-tdp/tas-db/clients?id=" + DNI + "&pass=" + PIN);
             try
@@ -37,7 +37,7 @@ namespace TPFinal
                     {
                         string iNombre = mResponseJSON[0].response.client.name;
                         string iCategoria = mResponseJSON[0].response.client.segment;
-                        return new Usuario(iNombre, iCategoria);
+                        return new DTOUsuario(iNombre, iCategoria);
                     }
                     else
                     {
@@ -52,7 +52,7 @@ namespace TPFinal
             
         }
 
-        public Usuario ObtenerUsuario(UserControl f)
+        public DTOUsuario ObtenerUsuario(UserControl f)
         {
             FormPrincipal iForm;
             iForm = (FormPrincipal)f.FindForm();

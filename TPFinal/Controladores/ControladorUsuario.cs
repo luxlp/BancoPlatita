@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using TPFinal.DAL;
+using TPFinal.DTO;
 
 
 namespace TPFinal.Controladores
@@ -14,7 +15,7 @@ namespace TPFinal.Controladores
 
           
       
-        public Usuario ObtenerUsuario(string pNombre, string pCategoria)
+        public DTOUsuario ObtenerUsuario(string pNombre, string pCategoria)
         {
             
             
