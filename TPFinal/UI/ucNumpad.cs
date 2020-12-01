@@ -72,7 +72,6 @@ namespace TPFinal
         {
             Button iButton = sender as Button;
             CajaTexto.Text += iButton.Text;
-            log.Debug("Se ingreso " + iButton.Text);
         }
     }
 }
