@@ -15,6 +15,7 @@ namespace TPFinal
         {
             this.fecha = pFecha;
             this.cantidad = pCantidad;
+
         }
     }
 }

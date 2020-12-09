@@ -82,35 +82,6 @@ C:\Users\cpank\Source\Repos\luxlp\BancoPlatita\TPFinal\bin\Debug\log4net.xml
 C:\Users\cpank\Source\Repos\luxlp\BancoPlatita\TPFinal\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\cpank\Source\Repos\luxlp\BancoPlatita\TPFinal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\cpank\Source\Repos\luxlp\BancoPlatita\TPFinal\obj\Debug\TPFinal.csproj.CopyComplete
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.csprojAssemblyReference.cache
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.Migrations.MigracionBanco1712.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.FormPrincipal.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.Properties.Resources.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucBlanquear.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucDni.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucMovimiento.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucNumpad.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucOperaciones.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucPin.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucSaldo.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucTarjeta.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.ucUltimosMovimientos.resources
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.csproj.GenerateResource.cache
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.csproj.CoreCompileInputs.cache
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.exe
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.pdb
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\TPFinal.exe.config
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\TPFinal.exe
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\TPFinal.pdb
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\EntityFramework.dll
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\log4net.dll
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\Newtonsoft.Json.dll
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\EntityFramework.xml
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\log4net.xml
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\bin\Debug\Newtonsoft.Json.xml
-C:\Users\corre\Source\Repos\BancoPlatita\TPFinal\obj\Debug\TPFinal.csproj.CopyComplete
 C:\Users\lux_l\Documents\Proyecto Taller\TPFinal\obj\Debug\TPFinal.csprojAssemblyReference.cache
 C:\Users\lux_l\Documents\Proyecto Taller\TPFinal\obj\Debug\TPFinal.Migrations.MigracionBanco1712.resources
 C:\Users\lux_l\Documents\Proyecto Taller\TPFinal\obj\Debug\TPFinal.FormPrincipal.resources
